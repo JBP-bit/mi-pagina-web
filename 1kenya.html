@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Kenya Cuevas</title>
+  <meta name="Author" content="Jacqueline Botello">
+  <meta name="description" content="Kenya Cuevas, defensora de los derechos humanos y activista trans en México">
+  <meta name="keywords" content="Kenya Cuevas, derechos humanos, activismo, mujeres inspiradoras">
+  <link rel="stylesheet" href="estructura.css">
+</head>
+<body>
+  <header class="ja">
+    <h1>Kenya Cuevas</h1>
+    <p>Activista mexicana y defensora de los derechos de las personas trans</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="marie.html">Marie Curie</a></li>
+      <li><a href="1kenya.html">Kenya Cuevas</a></li>
+      <li><a href="Christine De Pizan.html">Christine de Pizan</a></li>
+      <li><a href="#biografia">Biografía</a></li>
+          </ul>
+  </nav>
+
+  <main class="barra-busqueda">
+    <input type="text" id="busqueda" placeholder="Buscar en la página...">
+    <button onclick="buscarTexto()">Buscar</button>
+  </main>
+
+
+  <main class="contenido">
+<img src="k.jpg" alt="Kenya Cuevas" width="200">
+
+    <section>
+      <h2>Biografía</h2>
+      <p>Kenya Cuevas es una mujer trans mexicana reconocida por su incansable labor en la defensa de los derechos humanos, especialmente de las personas trans y en situación de calle. Su activismo comenzó tras el asesinato de su amiga Paola Buenrostro en 2016, un crimen de odio que marcó su vida y la motivó a alzar la voz en busca de justicia.</p>
+
+      <p>Desde entonces, fundó la Casa de las Muñecas Tiresias, una organización que brinda refugio, atención médica, apoyo psicológico y jurídico a mujeres trans, personas con VIH, personas en situación de calle y trabajadoras sexuales.</p>
+
+      <p>Kenya también ha trabajado por la memoria de las mujeres trans asesinadas, colocando placas conmemorativas y luchando contra la impunidad. Su valentía y determinación la han convertido en una referente del activismo en México y Latinoamérica.</p>
+    </section>
+
+    <section>
+      <h2>Frases destacadas</h2>
+      <ul>
+        <li>"Nosotras también somos parte de esta sociedad y merecemos vivir con dignidad."</li>
+        <li>"La justicia no puede depender de tu género, clase o identidad."</li>
+        <li>"No lucho por mí, lucho por las que ya no están."</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Legado</h2>
+      <p>Kenya Cuevas ha transformado el dolor en acción social. Gracias a su trabajo, cientos de personas trans han encontrado apoyo, visibilidad y esperanza. Su lucha por la justicia y los derechos humanos continúa inspirando a nuevas generaciones
+<img src="3k.jpg" alt="Kenya Cuevas" width="500".</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mujeres que Inspiran | Desarrollado por Jacqueline Botello</p>
+  </footer>
+
+<div class="pagination">
+  <a href="#">&laquo; Anterior</a>
+  <a href="marie.html">1</a>
+  <a href="1kenya.html">2</a>
+  <a href="Christine De Pizan.html">3</a>
+  <a href="#">Siguiente &raquo;</a>
+</div>
+
+
+  <script>
+    function buscarTexto() {
+      const input = document.getElementById("busqueda").value.toLowerCase();
+      const contenido = document.getElementById("contenido-buscable");
+      const secciones = contenido.querySelectorAll("section");
+
+      secciones.forEach(section => {
+        const texto = section.innerText.toLowerCase();
+        section.style.display = texto.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+
+</body>
+</html>

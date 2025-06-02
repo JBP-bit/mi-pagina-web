@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Christine de Pizan</title>
+  <meta name="author" content="Jacqueline Botello">
+  <meta name="description" content="Página sobre Christine de Pizan, escritora y pensadora medieval">
+  <meta name="keywords" content="Christine de Pizan, mujeres inspiradoras, literatura, feminismo">
+  <link rel="stylesheet" href="estructura.css">
+</head>
+<body>
+
+  <header class="ja">
+    <h1>Christine de Pizan</h1>
+    <p>Primera mujer escritora profesional de Europa y pionera del pensamiento feminista.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="marie.html">Marie Curie</a></li>
+      <li><a href="1kenya.html">Kenya Cuevas</a></li>
+      <li><a href="Christine De Pizan.html">Christine de Pizan</a></li>
+      <li><a href="#biografia">Biografía</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#legado">Legado</a></li>
+    </ul>
+  </nav>
+
+  <main class="barra-busqueda">
+    <input type="text" id="busqueda" placeholder="Buscar en la página...">
+    <button onclick="buscarTexto()">Buscar</button>
+  </main>
+
+
+  <main class="contenido">
+<img src="4.jpg" alt="Christine De Pizan" width="250">
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <p>Christine de Pizan nació en 1364 en Venecia, pero vivió la mayor parte de su vida en Francia. Fue escritora, poeta y filósofa. Tras quedar viuda, comenzó a escribir para mantener a su familia, convirtiéndose en la primera mujer en Europa en vivir de su pluma. Defendió los derechos de las mujeres en una época dominada por hombres.</p>
+    </section>
+
+    <section id="logros">
+      <h2>Logros Destacados</h2>
+      <ul>
+        <li>Primera mujer escritora profesional de Europa.</li>
+        <li>Escribió “La ciudad de las damas”, una obra que defiende el valor de las mujeres.</li>
+        <li>Cuestionó los prejuicios hacia las mujeres en la Edad Media.</li>
+      </ul>
+    </section>
+
+    <section id="legado">
+      <h2>Legado</h2>
+      <p>Christine de Pizan es considerada una de las primeras voces feministas de la historia. Su pensamiento sigue siendo leído y valorado como una defensa temprana de los derechos y capacidades de las mujeres.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Datos Curiosos</h3>
+    <ul>
+      <li>Aprendió latín, filosofía y literatura en una época donde las mujeres no accedían fácilmente a la educación.</li>
+      <li>Su obra fue redescubierta por estudiosas feministas siglos después.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Mujeres que Inspiran | Desarrollado por Jacqueline Botello</p>
+  </footer>
+
+<div class="pagination">
+  <a href="#">&laquo; Anterior</a>
+  <a href="marie.html">1</a>
+  <a href="1kenya.html">2</a>
+  <a href="Christine De Pizan.html">3</a>
+  <a href="#">Siguiente &raquo;</a>
+</div>
+
+
+  <script>
+    function buscarTexto() {
+      const input = document.getElementById("busqueda").value.toLowerCase();
+      const contenido = document.getElementById("contenido-buscable");
+      const secciones = contenido.querySelectorAll("section");
+
+      secciones.forEach(section => {
+        const texto = section.innerText.toLowerCase();
+        section.style.display = texto.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+
+</body>
+</html>
