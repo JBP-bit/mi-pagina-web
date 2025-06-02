@@ -1,0 +1,106 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8">
+  <title>Women in</title>
+  <meta name="author" content="Jacqueline Botello">
+  <meta name="description" content="Homenaje a mujeres que han dejado huella en la historia.">
+  <meta name="keywords" content="Marie Curie, Kenya Cuevas, Mujeres Inspiradoras, Ciencia, Derechos Humanos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estructura.css">
+</head>
+
+<body>
+
+  <header class="ja">
+    <h1>Marie Curie</h1>
+    <p>Pionera en la ciencia, la primera mujer en ganar un Premio Nobel.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Marie Curie</a></li>
+      <li><a href="1kenya.html">Kenya Cuevas</a></li>
+      <li><a href="Christine De Pizan.html">Christine de Pizan</a></li>
+      <li><a href="#biografia">Biografía</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#legado">Legado</a></li>
+    </ul>
+  </nav>
+
+  <main class="barra-busqueda">
+    <input type="text" id="busqueda" placeholder="Buscar en la página...">
+    <button onclick="buscarTexto()">Buscar</button>
+  </main>
+
+  <main class="contenido" id="contenido-buscable">
+
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <img src="marie.png" alt="Marie Curie" width="300">
+      <p>Maria Salomea Skłodowska-Curie, conocida como Marie Curie, nació el 7 de noviembre de 1867 en Varsovia, Polonia. Fue una física, matemática y química pionera en el campo de la radiactividad. Marie no solamente fue la primera mujer, sino que la primera persona en recibir dos Premios Nobel en distintas especialidades: Física (1903) y Química (1911), y la primera mujer en hacer clases en la Universidad de París. Marie se casó con el científico Pierre Curie y fue madre de quien recibiría más adelante también un Premio Nobel en Química, Irène Joliot-Curie.
+
+Motivada por el reciente descubrimiento de Antoine Henri Becquerel, que demostró que las sales de uranio emitían rayos de naturaleza desconocida, sin la necesidad de ser expuestas a la luz, Marie Curie investigó más allá este tema y descubrió que los compuestos formados por el torio también emitían rayos de forma espontánea. A este fenómeno le llamaron radioactividad.
+
+Como la radiactividad que generaban algunas muestras era más fuerte de lo que se esperaba, Marie y Pierre sospecharon que había otra sustancia radiactiva más potente que el uranio y el torio, y en 1898 dieron a conocer públicamente que habían descubierto un nuevo elemento: el polonio. Unos meses después anunciaron su nuevo hallazgo: el radio.</p>
+    </section>
+
+    <section id="logros">
+      <h2>Logros Destacados</h2>
+      <ul>
+        <li>Descubrió el polonio y el radio.</li>
+        <li>Primera mujer en ganar un Premio Nobel (1903, Física).</li>
+        <li>Única persona en recibir dos premios Nobel en diferentes ciencias.</li>
+        <li>Contribuyó al desarrollo de unidades móviles de rayos X.</li>
+      </ul>
+    </section>
+
+    <section id="legado">
+      <h2>Legado</h2>
+      <p>Marie Curie dejó un impacto duradero en la ciencia y la sociedad. Fue pionera en el estudio de la radiactividad y descubrió dos elementos: el polonio y el radio. Su trabajo abrió el camino para tratamientos médicos como la radioterapia contra el cáncer. Además, rompió barreras para las mujeres en la ciencia, siendo la primera en recibir un Premio Nobel y en enseñar en la Universidad de París. Su ejemplo sigue inspirando a científicas de todo el mundo.
+
+</p>
+    </section>
+
+  </main>
+
+  <aside>
+    <h3>Datos Curiosos</h3>
+    <ul>
+      <li>Su hija Irène Joliot-Curie también ganó un Premio Nobel.</li>
+      <li>Sus cuadernos aún son radiactivos.</li>
+      <li>Fue la primera profesora en la Universidad de París.</li>
+    </ul>
+  </aside>
+
+  <footer>
+     <p>&copy; 2025 Mujeres que Inspiran | Desarrollado por Jacqueline Botello</p>
+  </footer>
+
+ <div class="pagination">
+  <a href="#">&laquo; Anterior</a>
+  <a href="marie.html">1</a>
+  <a href="1kenya.html">2</a>
+  <a href="Christine De Pizan.html">3</a>
+  <a href="#">Siguiente &raquo;</a>
+</div>
+
+
+  <script>
+    function buscarTexto() {
+      const input = document.getElementById("busqueda").value.toLowerCase();
+      const contenido = document.getElementById("contenido-buscable");
+      const secciones = contenido.querySelectorAll("section");
+
+      secciones.forEach(section => {
+        const texto = section.innerText.toLowerCase();
+        section.style.display = texto.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
+
